@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Kepegawaian - BPBD Kabupaten Trenggalek</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            max-width: 900px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            width: 320px;
+            padding: 40px 30px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Styling khusus untuk Bangkom */
+        .card.bangkom {
+            border-top-color: #3498db;
+        }
+        .card.bangkom h2 { color: #2980b9; }
+        .card.bangkom .btn { background-color: #3498db; }
+        .card.bangkom:hover .btn { background-color: #2980b9; }
+
+        /* Styling khusus untuk Sertifikasi */
+        .card.sertifikasi {
+            border-top-color: #27ae60;
+        }
+        .card.sertifikasi h2 { color: #219653; }
+        .card.sertifikasi .btn { background-color: #27ae60; }
+        .card.sertifikasi:hover .btn { background-color: #219653; }
+
+        /* Responsif untuk layar HP */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Portal Kepegawaian</h1>
+        <p>Badan Penanggulangan Bencana Daerah (BPBD) Kabupaten Trenggalek</p>
+    </div>
+
+    <div class="container">
+        <a href="https://umpegbpbd.github.io/bangkom/" class="card bangkom">
+            <div class="card-icon">📚</div>
+            <h2>Pengembangan Kompetensi</h2>
+            <p>Layanan form input data riwayat Pengembangan Kompetensi (Bangkom) pegawai.</p>
+            <div class="btn">Input Bangkom</div>
+        </a>
+
+        <a href="https://umpegbpbd.github.io/sertifikasi/" class="card sertifikasi">
+            <div class="card-icon">🎓</div>
+            <h2>Sertifikasi Pegawai</h2>
+            <p>Layanan form input pendataan sertifikasi yang telah diikuti dan diselesaikan.</p>
+            <div class="btn">Input Sertifikasi</div>
+        </a>
+    </div>
+
+</body>
+</html>
